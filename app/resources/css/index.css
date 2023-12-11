@@ -1,0 +1,93 @@
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --work-red: hsl(15, 100%, 70%);
+    --play-blue: hsl(195, 74%, 62%);
+    --study-red: hsl(348, 100%, 68%);
+    --exercise-green: hsl(145, 58%, 55%);
+    --social-violet: hsl(264, 64%, 52%);
+    --self-care-orange: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --card-title-font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    color: white;
+    padding: 15px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--blue);
+    padding: 25px 20px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero__image {
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.hero__title {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.hero__title--large-font {
+    font-size: 1.4rem;
+    display: block;
+    padding-top: 3px;
+}
+
+.nav-container {
+    position: relative;
+    margin-top: -25px;
+    z-index: 1;
+}
+
+.period-nav {
+    background-color: var(--dark-blue);
+    height: 50px;
+    padding-top: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list {
+    list-style-type: none;
+    flex-grow: 1; /* child of .period-nav */
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.nav-list__item {
+    color: var(--desaturated-blue);
+    font-weight: 500;
+}
+
+.nav-list__item--selected {
+    color: white;
+}
+
+.nav-list__button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    font: inehrit;
+    cursor: pointer;
+    outline: inherit;
+    font-weight: 400;
+    font-size: 1.05rem;
+}
+
