@@ -20,12 +20,17 @@ body {
     padding: 15px;
 }
 
+.user-section {
+    padding: 25px 0;
+}
+
 .hero {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     background-color: var(--blue);
-    padding: 25px 20px;
+    padding: 25px 0px;
     border-radius: 15px;
     position: relative;
     z-index: 2;
@@ -37,6 +42,7 @@ body {
 }
 
 .hero__title {
+    color: var(--pale-blue);
     font-size: 0.9rem;
     font-weight: 300;
 }
@@ -45,6 +51,7 @@ body {
     font-size: 1.4rem;
     display: block;
     padding-top: 3px;
+    color: white;
 }
 
 .nav-container {
@@ -75,6 +82,11 @@ body {
     font-weight: 500;
 }
 
+.nav-list__item:hover {
+    color: white;
+    cursor: pointer;
+}
+
 .nav-list__item--selected {
     color: white;
 }
@@ -91,3 +103,229 @@ body {
     font-size: 1.05rem;
 }
 
+.activities {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.section-description {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    position: relative;
+    /* moves the section description ontop of the decoration
+    and then removes the left over margin */
+    top: -40px;
+    margin-bottom: -40px;
+    cursor: pointer;
+}
+
+/* this is so it can be removed in javascript when the internal elipses is hovered */ 
+.section-description--hover:hover {
+    background-color: var(--desaturated-blue);
+}
+
+.section-description__segment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.section-description__title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.section-description__current-duration {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 0;
+}
+.section-description__past-duration {
+    font-size: 0.9rem;
+    color: var(--pale-blue);
+}
+
+.section-settings__button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.section-settings__button:hover {
+    background-color: var(--dark-blue);
+}
+
+/* the below is the colour segments above each section */
+.section-decoration {
+    display: flex;
+    justify-content: end;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.section-icon {
+    height: 75px;
+    width: 75px;
+}
+
+.work-backing {
+    background-color: var(--work-red)
+}
+
+.play-backing {
+    background-color: var(--play-blue);
+}
+
+.study-backing {
+    background-color: var(--study-red);
+}
+
+.exercise-backing {
+    background-color: var(--exercise-green);
+}
+
+.social-backing {
+    background-color: var(--social-violet);
+}
+
+.self-care-backing {
+    background-color: var(--self-care-orange);
+}
+
+.section-icon {
+    position: relative;
+    top: -10px;
+    left: -20px;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    body {
+        padding: 15px 40px;
+    }
+
+    .hero__image {
+        height: 100px;
+        width: 100px;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__title--large-font {
+        font-size: 3rem;
+    }
+
+    .user-section {
+        padding: 40px 0;
+    }
+
+    .activities {
+        gap: 40px;
+    }
+
+    .section-description {
+        padding: 40px 60px 40px 60px;
+    }
+
+    .section-description__title {
+        font-size: 2.5rem;
+    }
+
+    .section-description__current-duration {
+        font-size: 4rem;
+    }
+
+    .section-description__past-duration {
+        font-size: 2rem;
+    }
+
+    .section-icon {
+        height: 100px;
+        width: 100px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+
+    .all-content-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        gap: 25px;
+        flex: 1;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 30px;
+    }
+    
+    .hero__title--large-font {
+        font-size: 3rem;
+        min-height: 113.6px; /* another hack because of not thinking ahead */
+    }
+
+    .hero__image {
+        height: 90px;
+        width: 90px;
+    }
+
+    .period-nav {
+        height: 100%;
+    }
+
+    .user-section {
+        width: 20%;
+        padding: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-list__item {
+        padding: 15px 20px;
+    }
+
+    .activities {
+        width: 60%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        row-gap: 15px;
+        column-gap: 25px;
+        align-content: space-between;
+    }
+
+    .activity-section {
+        width: 30%;
+    }
+
+    /* this is a hack to better align items, in future need to try to componentize both the mobile and desktop versions to try and better see where I should preplan stuff */
+    .section-description__segment {
+        margin-bottom: 42.05px;
+    }
+
+    .section-description__current-duration {
+        font-size: 3.5rem;
+    }
+
+    .section-description__segment--column {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0px;
+    }
+
+}

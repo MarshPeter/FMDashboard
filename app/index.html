@@ -21,68 +21,219 @@
   </style>
 </head>
 <body>
-
-  <section>
-    <div class="hero">
-      <div>
-        <img class="hero__image" src="./resources/images/image-jeremy.png" alt="Picture of Jeremy Robson" width="60" height="60">
+  <div class="all-content-container">
+    <section class="user-section">
+      <div class="hero">
+        <div>
+          <img class="hero__image" src="./resources/images/image-jeremy.png" alt="Picture of Jeremy Robson" width="60" height="60">
+        </div>
+        <div>
+          <h1 class="hero__title">Report For <span class="hero__title--large-font">Jeremy Robson</span></h1>
+        </div>
       </div>
-      <div>
-        <h1 class="hero__title">Report For <span class="hero__title--large-font">Jeremy Robson</span></h1>
+      <div class="nav-container">
+        <nav class="period-nav" aria-labelledby="duration-navigation">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <button class="nav-list__button">
+                Daily
+              </button>
+            </li>
+            <li class="nav-list__item nav-list__item--selected">
+              <button class="nav-list__button">
+                Weekly
+              </button>
+            </li>
+            <li class="nav-list__item">
+              <button class="nav-list__button">
+                Monthly
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="nav-container">
-      <nav class="period-nav" aria-labelledby="duration-navigation">
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <button class="nav-list__button">
-              Daily
-            </button>
-          </li>
-          <li class="nav-list__item nav-list__item--selected">
-            <button class="nav-list__button">
-              Weekly
-            </button>
-          </li>
-          <li class="nav-list__item">
-            <button class="nav-list__button">
-              Monthly
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
+    </section>
 
-  <main></main>
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
+    <main class="activities">
+      <section class="activity-section work">
+        <div class="section-decoration work-backing">
+          <img src="./resources/icons/icon-work.svg" alt="Briefcase demonstrating work SVG"
+          class="section-icon">
+        </div>
+        <div class="section-description section-description--hover">
+          <div class="section-description__segment">
+            <div>
+              <h2 class="section-description__title">
+                Work
+              </h2>
+            </div>
+            <div class="section-settings">
+              <button class="section-settings__button">
+                <img src="./resources/icons/icon-ellipsis.svg" alt="3 dots that form an ellipsis to indicate more options work duration information">
+              </button>
+            </div>
+          </div>
+          <div class="section-description__segment section-description__segment--column">
+            <p class="section-description__current-duration">
+              Loading...
+            </p>
+            <p class="section-description__past-duration">
+              Loading...
+            </p>
+          </div>
+        </div>
+      </section>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
+      <section class="activity-section play">
+        <div class="section-decoration play-backing">
+          <img src="./resources/icons/icon-play.svg" alt="Briefcase demonstrating play SVG"
+          class="section-icon">
+        </div>
+        <div class="section-description section-description--hover">
+          <div class="section-description__segment">
+            <div>
+              <h2 class="section-description__title">
+                Play
+              </h2>
+            </div>
+            <div class="section-settings">
+              <button class="section-settings__button">
+                <img src="./resources/icons/icon-ellipsis.svg" alt="3 dots that form an ellipsis to indicate more options play duration information">
+              </button>
+            </div>
+          </div>
+          <div class="section-description__segment section-description__segment--column">
+            <p class="section-description__current-duration">
+              Loading...
+            </p>
+            <p class="section-description__past-duration">
+              Loading...
+            </p>
+          </div>
+        </div>
+      </section>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
+      <section class="activity-section study">
+        <div class="section-decoration study-backing">
+          <img src="./resources/icons/icon-study.svg" alt="Briefcase demonstrating study SVG"
+          class="section-icon">
+        </div>
+        <div class="section-description section-description--hover">
+          <div class="section-description__segment">
+            <div>
+              <h2 class="section-description__title">
+                Study 
+              </h2>
+            </div>
+            <div class="section-settings">
+              <button class="section-settings__button">
+                <img src="./resources/icons/icon-ellipsis.svg" alt="3 dots that form an ellipsis to indicate more options study duration information">
+              </button>
+            </div>
+          </div>
+          <div class="section-description__segment section-description__segment--column">
+            <p class="section-description__current-duration">
+              Loading...
+            </p>
+            <p class="section-description__past-duration">
+              Loading...
+            </p>
+          </div>
+        </div>
+      </section>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
+      <section class="activity-section exercise">
+        <div class="section-decoration exercise-backing">
+          <img src="./resources/icons/icon-exercise.svg" alt="Briefcase demonstrating exercise SVG"
+          class="section-icon">
+        </div>
+        <div class="section-description section-description--hover">
+          <div class="section-description__segment">
+            <div>
+              <h2 class="section-description__title">
+                Exercise
+              </h2>
+            </div>
+            <div class="section-settings">
+              <button class="section-settings__button">
+                <img src="./resources/icons/icon-ellipsis.svg" alt="3 dots that form an ellipsis to indicate more options for exercise duration information">
+              </button>
+            </div>
+          </div>
+          <div class="section-description__segment section-description__segment--column">
+            <p class="section-description__current-duration">
+              Loading...
+            </p>
+            <p class="section-description__past-duration">
+              Loading...
+            </p>
+          </div>
+        </div>
+      </section>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
+      <section class="activity-section social">
+        <div class="section-decoration social-backing">
+          <img src="./resources/icons/icon-social.svg" alt="Briefcase demonstrating work SVG"
+          class="section-icon">
+        </div>
+        <div class="section-description section-description--hover">
+          <div class="section-description__segment">
+            <div>
+              <h2 class="section-description__title">
+                Social
+              </h2>
+            </div>
+            <div class="section-settings">
+              <button class="section-settings__button">
+                <img src="./resources/icons/icon-ellipsis.svg" alt="3 dots that form an ellipsis to indicate more options work duration information">
+              </button>
+            </div>
+          </div>
+          <div class="section-description__segment section-description__segment--column">
+            <p class="section-description__current-duration">
+              Loading...
+            </p>
+            <p class="section-description__past-duration">
+              Loading...
+            </p>
+          </div>
+        </div>
+      </section>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-
+      <section class="activity-section self-care">
+        <div class="section-decoration self-care-backing">
+          <img src="./resources/icons/icon-self-care.svg" alt="Briefcase demonstrating work SVG"
+          class="section-icon">
+        </div>
+        <div class="section-description section-description--hover">
+          <div class="section-description__segment">
+            <div>
+              <h2 class="section-description__title">
+                Self Care
+              </h2>
+            </div>
+            <div class="section-settings">
+              <button class="section-settings__button">
+                <img src="./resources/icons/icon-ellipsis.svg" alt="3 dots that form an ellipsis to indicate more options for self care duration information">
+              </button>
+            </div>
+          </div>
+          <div class="section-description__segment section-description__segment--column">
+            <p class="section-description__current-duration">
+              Loading...
+            </p>
+            <p class="section-description__past-duration">
+              Loading...
+            </p>
+          </div>
+        </div>
+      </section>  
+    </main>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/MarshPeter" target="_blank">Peter Farmer</a>.
   </div>
-  <script type="text/javascript" src="resources/javascript/index.js"></script>
+  <script type="module" src="resources/javascript/index.js"></script>
 </body>
 </html>
