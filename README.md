@@ -1,99 +1,101 @@
-# Frontend Mentor - Time tracking dashboard
+# Frontend Mentor - Time tracking dashboard solution
 
-![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this dashboard and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-If you would like to practice working with JSON data, we provide a local `data.json` file for the activities. This means you'll be able to pull the data from there instead of using the content in the `.html` file.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Switch between viewing Daily, Weekly, and Monthly stats
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Links
 
-### Expected behaviour
+- Solution URL: [Add solution URL here](https://github.com/MarshPeter/FMDashboard)
 
-- The text for the previous period's time should change based on the active timeframe. For Daily, it should read "Yesterday" e.g "Yesterday - 2hrs". For Weekly, it should read "Last Week" e.g. "Last Week - 32hrs". For monthly, it should read "Last Month" e.g. "Last Month - 19hrs".
+## My process
 
-## Where to find everything
+1. First step was to investigate several different topics that related to this project. These topics included:
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+- mobile first versus desktop first designs (chose mobile first design)
+- recommendations on CSS naming conventions (Chose BEM)
+- investigate accessibility features to keep in mind
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+2. Next I laid out my HTML that my project was going to use
+3. Afterword I created the CSS for the smaller resolution phones
+4. Next I expanded the screen width for mobile into tablet resolutions and made small adjustsments as the
+screensize got progressively wider.
+5. Next I made the desktop layout.
+6. Lastly I setup the javascript for the project to make it work with the data.json file (in chrome only since
+firefox doesn't support 'assert's. In future I will just use fetch instead of being lazy about things).
+7. Small touchups.
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Built with
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- javascript
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### What I learned
 
-## Building your project
+There were several things I learned about that assisted me in completing this project.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+- I tried to incorporate BEM class naming conventions for my css file. This assisted me greatly in the end,
+as when the project was getting close to completion, I realised that I had a hover concern. This resulted in me having
+to make a messy fix using javascript to get overlapping hover effects to work together well. With the BEM naming convention
+I abstracted from my hover effect in section-description, into another class name that I proceeded to remove and add with javascript when it was appropriate to do so to get the hover colour working.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```css
+.section-description {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    position: relative;
+    /* moves the section description ontop of the decoration
+    and then removes the left over margin */
+    top: -40px;
+    margin-bottom: -40px;
+    cursor: pointer;
+}
 
-## Deploying your project
+/* this is so it can be removed in javascript when the internal elipses is hovered */ 
+.section-description--hover:hover {
+    background-color: var(--desaturated-blue);
+}
+```
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+- I also made the conscious choice to utilise flexbox for my styling. This is because the mobile design was a column and
+I believed that the sections could be fit into a single flex row that wraps onto itself. This was mostly a success with
+me making some design choices that ended up biting me later down the line.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- Lastly, I wanted to organise my files better, and this was the main purpose behind using this project, as it enabled me a small project to test out the idea of doing so. This was a very effective measure, and I will be aiming to further improve file organisation by trying out a SASS compiler for CSS in my next project, and perhaps a javascript compilation alternative as well.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Useful resources
 
-## Create a custom `README.md`
+- [Reddit comment on the idea of mobile versus desktop lead implementation](https://www.reddit.com/r/Frontend/comments/yeccgh/comment/itymqrd/?utm_source=share&utm_medium=web2x&context=3) - This reddit comment helped me identify the direction I should go with whether I should to mobile or desktop first designs. It in my amatuer opinion holds quite a lot of quick lessons about flow of web pages and the order in which to do things. It is quite a mean spirited reply though.
+- [File organisation guide](https://appcropolis.com/blog/organize-html-css-javascript-files) - I tried really hard to organise my coding files better this time, and this link gave me direction on how to go about doing it. Overall I think it was very successful all things considered. However my javascript and css files were already getting very hard to follow with such a small design, and in future I may try to come up with ways to compile those from seperate files into one (Perhaps with SASS for css, but I don't really know of alternatives for javascript at this current time).
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## Author
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- Frontend Mentor - [@MarshPeter](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@FFPeterMF](https://www.twitter.com/FFPeterMF)
